@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wgusoftware2scheduler.Controllers.AppointmentController">
+   <children>
+      <Label fx:id="AppointmentHeader" layoutX="55.0" layoutY="50.0" text="Create Appointment">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="55.0" layoutY="101.0" prefHeight="564.0" prefWidth="145.0">
+         <children>
+            <Label style="-fx-padding: 10;" text="ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Title">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Type">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Location">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Start Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="End Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Start Time">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="End Time">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Customer">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="User ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-padding: 10;" text="Contact ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="253.0" layoutY="101.0" prefHeight="557.0" prefWidth="299.0" style="-fx-spacing: 10;">
+         <children>
+            <TextField fx:id="IdField" disable="true" editable="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="TitleField">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="TypeField">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="DescField">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="LocationField">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="Date" prefHeight="40.0" prefWidth="299.0" />
+            <DatePicker fx:id="Date1" prefHeight="40.0" prefWidth="299.0" />
+            <ComboBox fx:id="Start" prefHeight="37.0" prefWidth="299.0" />
+            <ComboBox fx:id="End" prefHeight="37.0" prefWidth="299.0" />
+            <ComboBox fx:id="Customer" prefHeight="37.0" prefWidth="299.0" />
+            <ComboBox fx:id="User" prefHeight="37.0" prefWidth="299.0" />
+            <ComboBox fx:id="Contact" prefHeight="37.0" prefWidth="299.0" />
+         </children>
+      </VBox>
+      <Button fx:id="SubmitButton" layoutX="253.0" layoutY="700.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="155.0" text="Submit" onAction="#onSubmitButtonClicked">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="CancelButton" layoutX="419.0" layoutY="700.0" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="39.0" prefWidth="133.0" text="Cancel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wgusoftware2scheduler.Controllers.MainController">
+   <children>
+      <TableView fx:id="AppTable" layoutX="37.0" layoutY="91.0" prefHeight="200.0" prefWidth="926.0">
+        <columns>
+          <TableColumn fx:id="AppIdColumn" prefWidth="53.28570556640625" text="ID" />
+          <TableColumn fx:id="AppTitleColumn" prefWidth="91.85711669921875" text="Title" />
+            <TableColumn fx:id="AppTypeColumn" prefWidth="80.14288330078125" text="Type" />
+            <TableColumn fx:id="AppDescColumn" prefWidth="75.0" text="Desc" />
+            <TableColumn fx:id="AppLocationColumn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="AppDateColumn" prefWidth="75.0" text="Start Date" />
+            <TableColumn fx:id="AppDateColumn1" prefWidth="75.0" text="End Date" />
+            <TableColumn fx:id="AppStartColumn" prefWidth="94.4285888671875" text="Start" />
+            <TableColumn fx:id="AppEndColumn" prefWidth="73.5714111328125" text="End" />
+            <TableColumn fx:id="AppContactColumn" prefWidth="71.857177734375" text="Contact" />
+            <TableColumn fx:id="AppCustomerColumn" prefWidth="87.2857666015625" text="Customer ID" />
+            <TableColumn fx:id="AppUserColumn" prefWidth="76.857177734375" text="Userd ID" />
+        </columns>
+      </TableView>
+      <HBox layoutX="96.0" layoutY="300.0" prefHeight="41.0" prefWidth="219.0">
+         <children>
+            <Button fx:id="AppointmentsAddButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="83.0" style="-fx-padding: 10;" text="Add" onAction="#onAppointmentsAddButtonClicked">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="AppointmentsUpdateButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" style="-fx-padding: 10;" text="Update" onAction="#onAppointmentsUpdateButtonClicked">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="AppoinmentsDeleteButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="96.0" style="-fx-padding: 10;" text="Delete" onAction="#onAppointmentsDeleteButtonClicked">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="323.0" layoutY="301.0" prefHeight="47.0" prefWidth="536.0">
+         <children>
+            <RadioButton fx:id="week" mnemonicParsing="false" style="-fx-padding: 10;" text="Current Week" toggleGroup="$FilterToggle" onAction="#handleRadio">
+                <ToggleGroup fx:id="FilterToggle"/>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="Month" mnemonicParsing="false" style="-fx-padding: 10;" text="Current Month" toggleGroup="$FilterToggle" onAction="#handleRadio">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="All" mnemonicParsing="false" prefHeight="47.0" prefWidth="193.0" style="-fx-padding: 10;" text="All Appointments" toggleGroup="$FilterToggle" onAction="#handleRadio">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+      <Label layoutX="96.0" layoutY="38.0" text="Appointments">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="368.0" prefHeight="0.0" prefWidth="977.0" />
+      <TableView fx:id="CustTable" layoutX="96.0" layoutY="414.0" prefHeight="200.0" prefWidth="675.0">
+        <columns>
+          <TableColumn fx:id="CustIdColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="CustNameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="CustAddressColumn" prefWidth="184.857177734375" text="Address" />
+            <TableColumn fx:id="CustPhoneColumn" prefWidth="118.142822265625" text="Phone Number" />
+            <TableColumn fx:id="CustStateProvinceColumn" minWidth="0.0" prefWidth="120.8570556640625" text="State/Province" />
+            <TableColumn fx:id="CustPostalColumn" prefWidth="99.857177734375" text="Postal Code" />
+        </columns>
+      </TableView>
+      <Label layoutX="96.0" layoutY="361.0" text="Customers">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <HBox layoutX="96.0" layoutY="625.0" prefHeight="41.0" prefWidth="219.0">
+         <children>
+            <Button fx:id="CustomersAddButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="83.0" style="-fx-padding: 10;" text="Add" onAction="#onCustomerAddButtonClicked">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="CustomersUpdateButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" style="-fx-padding: 10;" text="Update" onAction="#onCustomerUpdateButtonClicked">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="CustomersDeleteButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="96.0" style="-fx-padding: 10;" text="Delete" onAction="#onCustomerDeleteButtonClicked">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Separator layoutX="784.0" layoutY="370.0" orientation="VERTICAL" prefHeight="309.0" prefWidth="33.0" />
+      <Button fx:id="LogoutButton" layoutX="819.0" layoutY="560.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="147.0" style="-fx-padding: 10;" text="Logout" onAction="#onLogoutButtonClicked">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ReportsButton" layoutX="819.0" layoutY="443.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="147.0" style="-fx-padding: 10;" text="Reports" onAction="#onReportsButtonClicked">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
